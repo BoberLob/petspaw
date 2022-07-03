@@ -10,10 +10,10 @@ function Sidebar() {
     {name: 'Gallery', pic: imagesSearch}
   ];
 
-  const renderList = (...el) => {
+  const renderList = el => {
     return (
       <ul>
-        {listElements.map(item => {
+        {el.map(item => {
           return (
             <li>
               <a href={`/${item.name.toLowerCase()}`}>
