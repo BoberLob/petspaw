@@ -1,5 +1,6 @@
 .search-panel-container {
   display: flex;
+  justify-content: space-between;
   width: 680px;
   height: 60px;
   & .search-form {
@@ -7,13 +8,31 @@
     width: 470px;
     background-color: #FFFFFF;
     border-radius: 20px;
-    & button {
-      border: 0;
-      margin: 0;
-      background-color: transparent;
-      & .icon {
-        margin: 10px;
+    & input {
+      display: block;
+      border: none;
+      width: 100%;
+      margin: 15px 0 15px 20px;
+      font-weight: 400;
+      &:hover::placeholder {
+        color: transparent;
       }
+      &:focus {
+        outline: none;
+        &::placeholder {
+          color: transparent;
+        }
+      }
+      &::placeholder{
+        color: #8C8C8C;
+      }
+    }
+    & .search-button {
+      cursor: pointer;
+      width: 70px;
+      height: 60px;
+      border: 0;
+      background: no-repeat 50% url('../../assets/search-panel/search-icon.svg');
     }
   }
   & .icon {
@@ -21,36 +40,27 @@
     width: 60px;
     height: 60px;
     cursor: pointer;
-    background-color: #FFFFFF;
     border-radius: 20px;
-  }
-  & .likefavdis {
-    display: flex;
-    align-items: center;
-    & img {
-      margin: auto;
-    }
     &:hover {
       background-color: #FBE0DC;
+  }
+  }
+  & .like {
+    background: no-repeat 50% url('../../assets/search-panel/like-default.svg'), #FFFFFF;
+    &:active {
+      background: no-repeat 50% url('../../assets/search-panel/like-white.svg'), #FF868E;
     }
   }
-  & input {
-    background-color: transparent;
-    border: none;
-    width: 100%;
-    margin: 15px 20px;
-    font-weight: 400;
-    &:hover::placeholder {
-      color: transparent;
+  & .fav {
+    background: no-repeat 50% url('../../assets/search-panel/fav-default.svg'), #FFFFFF;
+    &:active {
+      background: no-repeat 50% url('../../assets/search-panel/fav-white.svg'), #FF868E;
     }
-    &:focus {
-      outline: none;
-      &::placeholder {
-        color: transparent;
-      }
-    }
-    &::placeholder{
-      color: #8C8C8C;
+  }
+  & .dislike {
+    background: no-repeat 50% url('../../assets/search-panel/dislike-default.svg'), #FFFFFF;
+    &:active {
+      background: no-repeat 50% url('../../assets/search-panel/dislike-white.svg'), #FF868E;
     }
   }
 }

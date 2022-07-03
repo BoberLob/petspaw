@@ -50,13 +50,13 @@ aside {
         border-radius: 20px;
       }
       & .voting {
-        background-color: #B4B7FF;
+        background: no-repeat 50% url('../../assets/sidebar/vote-table.svg'), #B4B7FF;
       }
       & .breeds {
-        background-color: #97EAB9;
+        background: no-repeat 50% url('../../assets/sidebar/pet-breeds.svg'), #97EAB9;
       }
       & .gallery {
-        background-color: #FFD280;
+        background: no-repeat 50% url('../../assets/sidebar/images-search.svg'), #FFD280;
       }
       & span {
         display: block;

@@ -1,13 +1,10 @@
-import petBreeds from '../../assets/sidebar/pet-breeds.svg';
-import voteTable from '../../assets/sidebar/vote-table.svg';
-import imagesSearch from '../../assets/sidebar/images-search.svg'
 import './sidebar.scss';
 
 function Sidebar() {
   const listElements = [
-    {name: 'Voting', pic: voteTable},
-    {name: 'Breeds', pic: petBreeds},
-    {name: 'Gallery', pic: imagesSearch}
+    {name: 'Voting'},
+    {name: 'Breeds'},
+    {name: 'Gallery'}
   ];
 
   const renderList = el => {
@@ -17,9 +14,7 @@ function Sidebar() {
           return (
             <li key={item.name}>
               <a href={`/${item.name.toLowerCase()}`}>
-                <div className={item.name.toLowerCase()}>
-                  <img src={item.pic} alt={item.name} />
-                </div>
+                <div className={item.name.toLowerCase()}></div>
                 <span>{item.name}</span>
               </a>
             </li>

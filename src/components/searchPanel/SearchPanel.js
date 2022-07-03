@@ -1,7 +1,3 @@
-import like from '../../assets/search-panel/like-default.svg';
-import favorite from '../../assets/search-panel/fav-default.svg';
-import dislike from '../../assets/search-panel/dislike-default.svg';
-import searchIcon from '../../assets/search-panel/search-icon.svg';
 import './searchPanel.scss';
 
 function SearchPanel() {
@@ -10,19 +6,11 @@ function SearchPanel() {
     <div className='search-panel-container'>
       <form className='search-form'>
         <input type="text" placeholder='Search for breeds by name' />
-        <button typeof='button' className='icon'>
-          <img src={searchIcon} alt="Search button" />
-        </button>
+        <button typeof='button' className='search-button' />
       </form>
-      <div className='icon likefavdis'>
-        <img src={like} alt="Like button" />
-      </div>
-      <div className='icon likefavdis'>
-        <img src={favorite} alt="Favorite button" />
-      </div>
-      <div className='icon likefavdis'>
-        <img src={dislike} alt="Dislike button" />
-      </div>
+      <div className='icon like'></div>
+      <div className='icon fav'></div>
+      <div className='icon dislike'></div>
     </div>
   );
 }
