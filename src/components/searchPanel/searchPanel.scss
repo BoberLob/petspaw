@@ -4,10 +4,18 @@
   width: 680px;
   height: 60px;
   & .search-form {
+    height: 58px;
     display: flex;
     width: 470px;
     background-color: #FFFFFF;
     border-radius: 20px;
+    border: 2px solid #FFFFFF;
+    &:hover {
+      border: 2px solid #FBE0DC;
+    }
+    &:focus-within {
+      border: 2px solid #FF868E;
+    }
     & input {
       display: block;
       border: none;
@@ -30,7 +38,6 @@
     & .search-button {
       cursor: pointer;
       width: 70px;
-      height: 60px;
       border: 0;
       background: no-repeat 50% url('../../assets/search-panel/search-icon.svg');
     }
@@ -43,7 +50,7 @@
     border-radius: 20px;
     &:hover {
       background-color: #FBE0DC;
-  }
+    }
   }
   & .like {
     background: no-repeat 50% url('../../assets/search-panel/like-default.svg'), #FFFFFF;
