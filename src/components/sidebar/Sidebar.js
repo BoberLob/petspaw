@@ -15,7 +15,7 @@ function Sidebar() {
       <ul>
         {el.map(item => {
           return (
-            <li>
+            <li key={item.name}>
               <a href={`/${item.name.toLowerCase()}`}>
                 <div className={item.name.toLowerCase()}>
                   <img src={item.pic} alt={item.name} />
