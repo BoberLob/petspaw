@@ -1,0 +1,29 @@
+.nav-container {
+  display: flex;
+  & div {
+    height: 40px;
+    min-width: 40px;
+    border-radius: 10px;
+  }
+  & .back-btn {
+    background: no-repeat 50% url('../../assets/navigation/back-btn-pink.svg'), #FBE0DC;
+    cursor: pointer;
+    &:hover {
+      background: no-repeat 50% url('../../assets/navigation/back-btn-white.svg'), #FF868E;
+    }
+  }
+  & .title {
+    display: flex;
+    align-items: center;
+    margin-left: 10px;
+    background: #FF868E;
+    & span {
+      text-transform: uppercase;
+      margin: 5px 30px;
+      color: #FFFFFF;
+      letter-spacing: 2px;
+      font-weight: 500;
+      line-height: 30px;
+    }
+  }
+}

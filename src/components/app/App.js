@@ -12,7 +12,9 @@ function App() {
       <main>
         {/* <Home /> */}
         <SearchPanel />
-        <Voting />
+        <div className='content'>
+          <Voting />
+        </div>
       </main>
     </div>
   );

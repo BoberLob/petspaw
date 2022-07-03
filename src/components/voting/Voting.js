@@ -1,13 +1,11 @@
-
+import Navigation from '../navigation/Navigation';
 
 import './voting.scss';
 
 function Voting() {
   return (
-    <div className='voting-container'>
-
-    </div>
-  );
+    <Navigation title='Voting' />
+  )
 }
 
 export default Voting;
