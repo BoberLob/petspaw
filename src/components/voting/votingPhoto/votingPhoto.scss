@@ -1,0 +1,50 @@
+.voting-photo {
+  max-width: 100%;
+}
+.voting-btns-container {
+  display: flex;
+  flex-direction: row;
+  z-index: 1;
+  margin: -40px auto 5px;
+  border-radius: 20px;
+  background: #FFFFFF;
+  & div {
+    z-index: 1;
+    height: 88px;
+    width: 88px;
+    border: 4px solid #FFFFFF;
+    cursor: pointer;
+  }
+  & .vote-like {
+    border-radius: 20px 0 0 20px;
+    background: no-repeat 50% url('../../../assets/voting/like-default.svg'), #97EAB9;
+    &:hover {
+      background: no-repeat 50% url('../../../assets/voting/like-hover.svg'), rgba(151, 234, 185, 0.3);;
+    }
+    &:active {
+      background: no-repeat 50% url('../../../assets/voting/like-default.svg'), #97EAB9;
+    }
+  }
+  & .vote-fav {
+    background: no-repeat 50% url('../../../assets/voting/fav-default.svg'), #FF868E;
+    border-right: none;
+    border-left: none;
+    width: 80px;
+    &:hover {
+      background: no-repeat 50% url('../../../assets/voting/fav-hover.svg'), rgba(255, 134, 142, 0.3);
+    }
+    &:active {
+      background: no-repeat 50% url('../../../assets/voting/fav-active.svg'), #FF868E;
+    }
+  }
+  & .vote-dislike {
+    background: no-repeat 50% url('../../../assets/voting/dislike-default.svg'), #FFD280;
+    border-radius: 0 20px 20px 0;
+    &:hover {
+      background: no-repeat 50% url('../../../assets/voting/dislike-hover.svg'), rgba(255, 210, 128, 0.3);
+    }
+    &:active {
+      background: no-repeat 50% url('../../../assets/voting/dislike-default.svg'), #FFD280;
+    }
+  }
+}

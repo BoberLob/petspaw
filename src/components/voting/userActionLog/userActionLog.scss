@@ -1,0 +1,48 @@
+.user-action-log {
+  flex-direction: column;
+  list-style: none;
+  & li {
+    display: flex;
+    width: 100%;
+    height: 60px;
+    margin: 10px 0;
+    background: #F8F8F7;
+    border-radius: 10px;
+    align-items: center;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 400;
+    & div {
+      padding: 0 10px;
+      height: 30px;
+    }
+    & .time {
+      line-height: 30px;
+      width: 60px;
+      border-radius: 5px;
+      background: #FFFFFF;
+      margin: 15px;
+    }
+    & .action {
+      line-height: 30px;
+      width: 100%;
+      color: #8C8C8C;
+      & span {
+        font-weight: 500;
+        color: #1D1D1D;
+      }
+    }
+    & .logo {
+      width: 60px;
+    }
+    & .fav {
+      background: no-repeat 50% url('../../../assets/voting/user-acion-log/fav.svg');
+    }
+    & .like {
+      background: no-repeat 50% url('../../../assets/voting/user-acion-log/like.svg');
+    }
+    & .dislike {
+      background: no-repeat 50% url('../../../assets/voting/user-acion-log/dislike.svg');
+    }
+  }
+}
