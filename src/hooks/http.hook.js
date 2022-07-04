@@ -3,10 +3,7 @@ import { useState, useCallback } from "react";
 const useHttp = () => {
   const [process, setProcess] = useState('waiting');
 
-  const request = useCallback(async (url, method = 'GET', body = null, headers = {
-    'Content-Type': 'application/json',
-    'x-api-key': 'api_key=7fea8c76-40f9-4f2e-b122-3653a2d9e083'
-  }) => {
+  const request = useCallback(async (url, method = 'GET', body = null, headers = {'Content-Type': 'application/json'}) => {
 
     setProcess('loading');
 

@@ -9,7 +9,7 @@ function VotingPhoto() {
 
   const [data, setData] = useState(null);
 
-  const {process, getVotingData, clearError, setProcess} = usePetsPaw();
+  const {process, getVotingData, postVotes, clearError, setProcess} = usePetsPaw();
 
   useEffect(() => {
     getData();
@@ -23,6 +23,11 @@ function VotingPhoto() {
       .then(() => setProcess('confirmed'));
   }
 
+  const voteAction = (id, action, vote) => {
+    postVotes(id, action, vote);
+    getData();
+  }
+
   return (
     <>
       <div className='photo-container'>
@@ -30,9 +35,9 @@ function VotingPhoto() {
       </div>
 
       <div className='voting-btns-container'>
-        <div onClick={getData} className='vote-like'></div>
+        <div onClick={() => voteAction(data.id, 'like', 1)} className='vote-like'></div>
         <div className='vote-fav'></div>
-        <div onClick={getData} className='vote-dislike'></div>
+        <div onClick={() => voteAction(data.id, 'dislike', 0)} className='vote-dislike'></div>
       </div>
     </>
   );
