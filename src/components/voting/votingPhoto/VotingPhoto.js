@@ -18,7 +18,7 @@ function VotingPhoto() {
 
   const getData = () => {
     clearError();
-    getVotingData(Math.floor(Math.random() * 1000000000))
+    getVotingData()
       .then(setData)
       .then(() => setProcess('confirmed'));
   }
