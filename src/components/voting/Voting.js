@@ -1,3 +1,6 @@
+
+
+import SearchPanel from '../searchPanel/SearchPanel';
 import Navigation from '../navigation/Navigation';
 import VotingPhoto from './votingPhoto/VotingPhoto';
 import UserActionLog from './userActionLog/UserActionLog';
@@ -7,12 +10,19 @@ import './voting.scss';
 function Voting() {
   return (
     <>
-      <Navigation title='Voting' />
-      <div className='voting-container'>
-        <VotingPhoto />
-        <UserActionLog />
-      </div>
-    </>    
+      <main>
+        <SearchPanel />
+
+        <div className='content'>
+          <Navigation />
+          <div className='voting-container'>
+            <VotingPhoto />
+            <UserActionLog />
+          </div>
+        </div>
+
+      </main>
+    </>  
   )
 }
 

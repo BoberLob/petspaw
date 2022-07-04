@@ -1,6 +1,7 @@
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+
 import Sidebar from '../sidebar/Sidebar';
 import Home from '../home/Home';
-import SearchPanel from '../searchPanel/SearchPanel';
 import Voting from '../voting/Voting';
 
 import './App.scss';
@@ -8,14 +9,13 @@ import './App.scss';
 function App() {
   return (
     <div className="container">
-      <Sidebar />
-      <main>
-        {/* <Home /> */}
-        <SearchPanel />
-        <div className='content'>
-          <Voting />
-        </div>
-      </main>
+      <BrowserRouter>
+        <Sidebar />
+        <Routes>
+          <Route path='/' element={<Home />} />
+          <Route path='/voting' element={<Voting />} />
+        </Routes>        
+      </BrowserRouter>
     </div>
   );
 }

@@ -5,6 +5,12 @@
   max-width: 1440px;
 }
 
+main {
+  width: 54%;
+  height: 100vh;
+  padding: 30px 30px 30px 65px;
+}
+
 .content {
   width: 100%;
   height: auto;
@@ -12,10 +18,4 @@
   margin: 10px 0 20px 0;
   border-radius: 20px;
   padding: 20px;
-}
-
-main {
-  width: 54%;
-  height: 100vh;
-  padding: 30px 30px 30px 65px;
 }

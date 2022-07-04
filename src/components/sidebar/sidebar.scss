@@ -37,10 +37,15 @@ aside {
             background-color: #FBE0DC;
           }
         }
-        &:active {
+      }
+      & .active {
+        & span {
+          background-color: #FF868E;
+          color: #FFFFFF;
+        }
+        &:hover {
           & span {
             background-color: #FF868E;
-            color: #FFFFFF;
           }
         }
       }

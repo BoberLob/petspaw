@@ -1,22 +1,20 @@
+import { NavLink } from 'react-router-dom';
+
 import './sidebar.scss';
 
 function Sidebar() {
-  const listElements = [
-    {name: 'Voting'},
-    {name: 'Breeds'},
-    {name: 'Gallery'}
-  ];
+  const listElements = ['voting', 'breeds', 'gallery'];
 
   const renderList = el => {
     return (
       <ul>
         {el.map(item => {
           return (
-            <li key={item.name}>
-              <a href={`/${item.name.toLowerCase()}`}>
-                <div className={item.name.toLowerCase()}></div>
-                <span>{item.name}</span>
-              </a>
+            <li key={item}>
+              <NavLink className={({isActive}) => isActive ? 'active' : undefined} to={`/${item}`}>
+                <div className={item}></div>
+                <span>{item}</span>
+              </NavLink>
             </li>
           );
         })}
