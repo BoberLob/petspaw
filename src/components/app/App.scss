@@ -1,13 +1,12 @@
 .container {
   display: flex;
-  margin: auto;
-  min-height: 100vh;
+  margin: 0 auto;
   max-width: 1440px;
 }
 
 main {
   width: 54%;
-  height: 100vh;
+  height: auto;
   padding: 30px 30px 30px 65px;
 }
 
@@ -15,7 +14,7 @@ main {
   width: 100%;
   height: auto;
   background-color: #FFFFFF;
-  margin: 10px 0 20px 0;
+  margin-top: 10px;
   border-radius: 20px;
   padding: 20px;
 }

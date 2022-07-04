@@ -1,6 +1,6 @@
 .home-cont {
   width: 100%;
-  height: 100vh;
+  height: 100%;
   & .backgrnd {
     z-index: -1;
     width: 680px;
@@ -12,7 +12,7 @@
     position: absolute;
     top: 0;
     left: 47%;
-    background: no-repeat url('../../assets/home/girl-and-pet.svg');
+    background: no-repeat 0% url('../../assets/home/girl-and-pet.svg');
     width: 775px;
     height: 900px;
   }

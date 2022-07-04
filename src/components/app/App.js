@@ -14,8 +14,8 @@ function App() {
         <Routes>
           <Route path='/' element={<Home />} />
           <Route path='/voting' element={<Voting />} />
-        </Routes>        
-      </BrowserRouter>
+        </Routes>
+      </BrowserRouter> 
     </div>
   );
 }
