@@ -6,7 +6,7 @@ const usePetsPaw = () => {
   const _apiBase = 'https://api.thecatapi.com/v1/';
 
   const getVotingData = async (page = 0) => {
-    const res = await request(`${_apiBase}images/search?page=${page}&limit=1`);
+    const res = await request(`${_apiBase}images/search?size=med&page=${page}&limit=1`);
     return _transformVotingData(res[0]);
   }
 

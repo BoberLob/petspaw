@@ -25,7 +25,9 @@ function VotingPhoto() {
 
   return (
     <>
-      {setContent(process, viewPhoto, data)}
+      <div className='photo-container'>
+        {setContent(process, viewPhoto, data)}
+      </div>
 
       <div className='voting-btns-container'>
         <div onClick={getData} className='vote-like'></div>

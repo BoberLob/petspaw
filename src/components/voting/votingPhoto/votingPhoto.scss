@@ -1,5 +1,13 @@
+.photo-container {
+  width: 100%;
+  min-height: 400px;
+  display: flex;
+  align-items: center;
+}
+
 .voting-photo {
   max-width: 100%;
+  margin: 0 auto;
 }
 .voting-btns-container {
   display: flex;
