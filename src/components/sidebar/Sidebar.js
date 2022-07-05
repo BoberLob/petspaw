@@ -2,7 +2,7 @@ import { NavLink } from 'react-router-dom';
 
 import './sidebar.scss';
 
-function Sidebar() {
+const Sidebar = () => {
   const listElements = ['voting', 'breeds', 'gallery'];
 
   const renderList = el => {

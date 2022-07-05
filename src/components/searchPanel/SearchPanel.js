@@ -1,6 +1,6 @@
 import './searchPanel.scss';
 
-function SearchPanel() {
+const SearchPanel = () => {
 
   return (
     <div className='search-panel-container'>

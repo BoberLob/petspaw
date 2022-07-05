@@ -5,7 +5,7 @@ import setContent from '../../../utils/setContent';
 
 import './userActionLog.scss';
 
-function UserActionLog() {
+const UserActionLog = () => {
   const [data, setData] = useState(null);
   const {process, getVotes, clearError, setProcess} = usePetsPaw();
 
@@ -23,18 +23,20 @@ function UserActionLog() {
 
   return (
     <ul className='user-action-log'>
-      {setContent(process, logItems, data)}
+      {setContent(process, logItems, data, false)}
     </ul>
   );
 }
 
 const logItems = ({data}) => {
   const log = data.map(item => {
+    const actionType = action => `${action === 1 ? 'like' : 'dislike'}`;
+    const capitalize = w => w[0].toUpperCase() + w.slice(1);
     return (
       <li key={item.id}>
         <div className='time'>{item.time}</div>
-        <div className='action'>Image ID: <span>{item.id}</span> was added to Favorites</div>
-        <div className={`logo ${item.action === 1 ? 'like' : 'dislike'}`}></div>
+        <div className='action'>Image ID: <span>{item.id}</span> was added to {capitalize(actionType(item.action)) + 's'}</div>
+        <div className={`logo ${actionType(item.action)}`}></div>
       </li>
     )
   })

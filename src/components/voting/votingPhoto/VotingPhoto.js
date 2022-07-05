@@ -5,7 +5,7 @@ import setContent from '../../../utils/setContent';
 
 import './votingPhoto.scss';
 
-function VotingPhoto() {
+const VotingPhoto = () => {
 
   const [data, setData] = useState(null);
 
@@ -28,24 +28,25 @@ function VotingPhoto() {
     getData();
   }
 
-  return (
-    <>
+  const viewPhoto = ({data}) => {
+    const {url} = data;
+    return (
+      <>
       <div className='photo-container'>
-        {setContent(process, viewPhoto, data)}
+        <img className='voting-photo' src={url} alt="cat-id" />
       </div>
-
       <div className='voting-btns-container'>
         <div onClick={() => voteAction(data.id, 'like', 1)} className='vote-like'></div>
         <div className='vote-fav'></div>
         <div onClick={() => voteAction(data.id, 'dislike', 0)} className='vote-dislike'></div>
       </div>
-    </>
-  );
-}
+      </>
+    )
+  }
 
-const viewPhoto = ({data}) => {
-  const {url} = data;
-  return <img className='voting-photo' src={url} alt="cat-id" />
+  return (
+    setContent(process, viewPhoto, data)
+  );
 }
 
 export default VotingPhoto;

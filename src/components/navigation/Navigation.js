@@ -2,7 +2,7 @@ import { useNavigate } from 'react-router-dom';
 
 import './navigation.scss';
 
-function Navigation() {
+const Navigation = () => {
   const nav = useNavigate();
   return (
     <div className='nav-container'>

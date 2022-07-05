@@ -6,7 +6,7 @@ import Voting from '../voting/Voting';
 
 import './App.scss';
 
-function App() {
+const App = () => {
   return (
     <div className="container">
       <BrowserRouter>

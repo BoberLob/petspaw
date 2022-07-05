@@ -7,7 +7,7 @@ import UserActionLog from './userActionLog/UserActionLog';
 
 import './voting.scss';
 
-function Voting() {
+const Voting = () => {
   return (
     <>
       <main>

@@ -1,11 +1,11 @@
 import Spinner from "../components/spinner/Spinner";
 
-const setContent = (process, Component, data) => {
+const setContent = (process, Component, data, spinner = true) => {
   switch (process) {
     case 'waiting':
-      return <Spinner />;
+      return spinner ? <Spinner /> : null;
     case 'loading': 
-      return <Spinner />;
+      return spinner ? <Spinner /> : null;
     case 'confirmed':
       return <Component data={data}/>;
     case 'error':

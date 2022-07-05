@@ -1,6 +1,6 @@
 import './home.scss';
 
-function Home() {
+const Home = () => {
   return (
     <main>
       <div className='home-cont'>

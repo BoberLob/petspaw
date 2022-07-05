@@ -7,7 +7,7 @@ const usePetsPaw = () => {
   const _apiKey = '?api_key=48590d6e-8781-4957-a99d-4ce5410ff12c'
 
   const getVotingData = async () => {
-    const res = await request(`${_apiBase}images/search?size=med&limit=1${_apiKey}`);
+    const res = await request(`${_apiBase}images/search?size=full&limit=1${_apiKey}`);
     return _transformVotingData(res[0]);
   }
 
@@ -30,22 +30,16 @@ const usePetsPaw = () => {
     }
   }
 
-  const _transformVotes = (data) => {
-    const res = data.map(item => ({
-      id: item.image_id,
-      action: item.value,
-      time: Date.parse(item.created_at)
-    }))
-      .sort((a, b) => b.time - a.time)
-      .slice(0, 2)
-      .map(item => ({id: item.id, action: item.action, time: getTime(item.time)}));
-
-    return res;
+  const _transformVotes = (data) => { 
+    return data.map(item => ({id: item.image_id, action: item.value, time: Date.parse(item.created_at)}))
+                .sort((a, b) => b.time - a.time)
+                .slice(0, 10)
+                .map(item => ({id: item.id, action: item.action, time: getTime(item.time)}));
   }
 
-  const getZero = (val) => val.toString().length === 1 ? `0${val}` : val;
+  const getZero = value => value.toString().length === 1 ? `0${value}` : value;
 
-  const getTime = (value) => {
+  const getTime = value => {
     const hours = new Date(value).getHours(),
           minutes = new Date(value).getMinutes();
 
